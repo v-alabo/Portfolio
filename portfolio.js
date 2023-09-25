@@ -1,3 +1,5 @@
+/* Loader section */
+
 window.addEventListener("load", () => {
   document.querySelector(".loader").classList.add("loader-hidden");
 
@@ -6,6 +8,7 @@ window.addEventListener("load", () => {
   })
 })
 
+/* About section */
 
 var sublinks = document.getElementsByClassName("sub-link");
 var subcontents = document.getElementsByClassName("sub-content");
@@ -19,6 +22,8 @@ var subcontents = document.getElementsByClassName("sub-content");
    event.currentTarget.classList.add('activelink');
    document.getElementById(subname).classList.add('activecont');
   }  
+
+/* Side-menu section */
 
   var sidemenu = document.getElementById("menu");
 
@@ -36,3 +41,21 @@ var subcontents = document.getElementsByClassName("sub-content");
   })
  } 
  /* Contact section */
+
+ const scriptURL =
+ "https://script.google.com/macros/s/AKfycbyXc3Nuf5x4A7wyo0mteqKMbjLc0Zy8X37g4aDQAF0G_rJdBf1XvapMgM8L3l5B0qY/exec";
+const form = document.forms["submit-to-google-sheet"];
+const msg = document.getElementById("msg");
+
+form.addEventListener("submit", (e) => {
+ e.preventDefault();
+ fetch(scriptURL, { method: "POST", body: new FormData(form) })
+   .then((response) => {
+     msg.innerHTML = "Message sent succesfully";
+     setTimeout(function () {
+       msg.innerHTML = ""
+     },5000)
+     form.reset()
+   })
+   .catch((error) => console.error("Error!", error.message));
+});
