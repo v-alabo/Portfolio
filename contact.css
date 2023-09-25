@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+.loader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    transition: opacity 1s, visibility 10s, transform 5s;
+    z-index: 1;
+  }
+  
+  .loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .loader::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 15px solid #45474b;
+    border-top-color: red;
+    border-radius: 50px;
+    animation: loader 1s ease-in infinite;
+  }
+  @keyframes loader {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+body{
+    background: black;
+    color: white;
+}
+.logo{
+    font-size: 50px;
+    font-weight: 400;
+}
+.ala{
+    color: red;
+
+}
+.contain{
+    padding: 30px 5%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav .fa-solid{
+    display: none;
+}
+#contact{
+    padding: 70px 0;
+}
+.container{
+    padding: 0 5%;
+}
+.row{
+    display: flex;
+}
+
+.conleft{
+    flex-basis: 35%;
+    padding-top: 5px;
+}
+.conright{
+    flex-basis: 60%;
+}
+.conleft h1{
+    font-size: 50px;
+}
+.conleft p{
+    margin-top: 30px;
+    font-size: 25px;
+}
+.conleft p i{
+    color: red;
+    margin-right: 10px;
+    font-size: 20px;
+}
+.icons{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.icons a{
+    text-decoration: none;
+    font-size: 45px;
+    margin-left: 20px;
+    margin-right: 40px;
+    display: inline-block;
+    color: #ababab;
+    transition: transform 0.5s;
+}
+.what:hover{
+    color: #25D366;
+    transform: translateY(-5px);
+}
+.tweet:hover{
+    color: #00acee;
+    transform: translateY(-5px);
+}
+.insta:hover{
+    color:#d62976;
+    transform: translateY(-5px);
+}
+.link:hover{
+    color: #0A66C2;
+    transform: translateY(-5px);
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px;
+    background: red;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+.conright form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    font-size: 20px;
+}
+.btn2{
+    width: 100%;
+    padding: 15px ;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-size:30px;
+    font-weight: 400;
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px){
+    nav .fa-solid{
+        display: block;
+        font-size: 30px;
+    }
+    nav ul{
+        position: fixed;
+        background: red;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 70px; 
+        transition: right 0.5s;  
+    }
+    nav ul li{
+        display: block;
+        margin: 37px 10%;
+        font-weight: 600;
+    }
+    nav ul li a{
+        font-size: 35px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 40px;
+        left:25px;
+        cursor: pointer;
+    }
+    .conleft, .conright{
+        flex-basis: 100%;
+    }
+    .conleft{
+        margin-bottom: 30px;
+        
+    }
+    .row{
+        display: inline;
+    }
+    }
+    @media only screen and (min-width: 650px) and (max-width: 950px){
+        nav .fa-solid{
+           display: block;
+           font-size: 30px;
+       }
+       nav ul{
+           position: fixed;
+           background: red;
+           top: 0;
+           right: -300px;
+           width: 300px;
+           height: 100vh;
+           padding-top: 70px; 
+           transition: right 0.5s;  
+       }
+       nav ul li{
+           display: block;
+           margin: 37px 10%;
+           font-weight: 600;
+       }
+       nav ul li a{
+           font-size: 25px;
+       }
+       nav ul .fa-solid{
+           position: absolute;
+           top: 40px;
+           left:25px;
+           cursor: pointer;
+       }
+       .conleft, .conright{
+        flex-basis: 100%;
+    }
+    .conleft{
+        margin-bottom: 30px;
+        
+    }
+    .row{
+        display: inline;
+    }
+    }

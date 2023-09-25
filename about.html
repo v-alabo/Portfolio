@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="about.css" />
+    <script
+      src="https://kit.fontawesome.com/931303b88f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="loader" loader-hidden></div>
+    <div id="header">
+      <div class="contain">
+        <nav>
+          <label class="logo"> <span class="ala">A</span>LABO </label>
+          <ul id="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+      </div>
+    </div>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about1">
+            <img src="images/dp1.jpg" />
+          </div>
+          <div class="about2">
+            <h1>About me</h1>
+            <p>
+              Experienced Front End Developer proficient in HTML, CSS, and JavaScript.<br>4+ years of experience in the field of web development working with
+              national and international clients. Currently working as a freelancer
+              helping brands solve problems through responsive web structure and
+              experience.<br>Skilled Production Manager with expertise in Xcode and the AppStore.<br>Effective Project Manager with strong leadership and teamwork abilities
+            </p>
+            <div class="sub-title">
+              <p class="sub-link activelink" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="sub-link" onclick="opentab('experience')">Experience</p>
+            </div>
+            <div class="sub-content activecont" id="skills">
+              <ul>
+                <li>
+                  <span>Front-End</span><br />Creating a responsive website
+                </li>
+                <li>
+                  <span>Production Manager</span><br />Testing and managing
+                  releases Projects and Products<br /><br>
+                  Managing the production process for software applications from
+                  development to release
+                </li>
+                <li>
+                  <span>Software Tester</span><br />Creating and filling out
+                  application page on Appstore and Google play<br /><br>
+                  Testing release projects( running the application in xcode,
+                  visual inspection for bugs and checking functionality of the
+                  application for performance)
+                </li>
+              </ul>
+            </div>
+            <div class="sub-content" id="experience">
+              <ul>
+                <li>
+                  <span>2022 - 2023</span><br />Production Manager at AppCake
+                </li>
+                <li>
+                  <span>2020 - 2021</span><br />Intership at Webwonders Creative
+                  Agency
+                </li>
+                <li>
+                  <span>2018 - 2020</span><br />Production Manager at Teekay LLC
+                  Creative Agency
+                </li>
+                <li>
+                  <span>2018</span><br />Internship at Oil & Gas Free Zones
+                  Authority
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="about.js"></script>
+  </body>
+</html>

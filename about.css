@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+}
+.loader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    transition: opacity 1s, visibility 1s;
+    z-index: 1;
+  }
+  
+  .loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .loader::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 15px solid #45474b;
+    border-top-color: red;
+    border-radius: 50px;
+    animation: loader 1s ease infinite;
+  }
+  @keyframes loader {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  body{
+    background: black;
+    color: white;
+}
+.logo{
+    font-size: 50px;
+    font-weight: 400;
+}
+.ala{
+    color: red;
+
+}
+.contain{
+    padding: 30px 5%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav .fa-solid{
+    display: none;
+}
+#about{
+    padding: 10px 0;
+    color: #ababab;
+}.container{
+    padding: 0 5%;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about1{
+    flex-basis: 35%;
+}
+.about1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about2{
+    flex-basis: 60%;
+}
+h1{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+.about2 p{
+    font-size: 20px
+}
+.sub-title{
+    display: flex;
+    margin: 20px 40px;
+}
+.sub-link{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.sub-link::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.sub-link.activelink::after{
+    width: 50%;
+}
+.sub-content ul li{
+    list-style: none;
+    margin: 25px 0;
+    font-size: 20px;
+}
+.sub-content ul li span{
+    color: rgb(236, 47, 47);
+    font-size: 20px;
+}
+.sub-content{
+    display: none;
+}
+.sub-content.activecont{
+    display: block;
+}
+@media only screen and (max-width: 600px){
+
+    nav .fa-solid{
+        display: block;
+        font-size: 30px;
+    }
+    nav ul{
+        position: fixed;
+        background: red;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 70px; 
+        transition: right 0.5s;  
+        z-index: 1;
+    }
+    nav ul li{
+        display: block;
+        margin: 37px 10%;
+        font-weight: 550;
+    }
+    nav ul li a{
+        font-size: 35px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 40px;
+        left:25px;
+        cursor: pointer;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .about1, .about2{
+        flex-basis: 100%;
+    }
+    .about1{
+        margin-bottom: 30px;
+    }
+    }
+    @media only screen and (min-width: 650px) and (max-width: 950px){
+         nav .fa-solid{
+            display: block;
+            font-size: 30px;
+        }
+        nav ul{
+            position: fixed;
+            background: red;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            padding-top: 70px; 
+            transition: right 0.5s;  
+        }
+        nav ul li{
+            display: block;
+            margin: 37px 10%;
+            font-weight: 600;
+        }
+        nav ul li a{
+            font-size: 25px;
+        }
+        nav ul .fa-solid{
+            position: absolute;
+            top: 40px;
+            left:25px;
+            cursor: pointer;
+        }
+        h1{
+            font-size: 40px;
+        }
+        .about1, .about2{
+            flex-basis: 100%;
+        }
+        .about1{
+            margin-bottom: 30px;
+        }
+        .about1 img{
+            width: 70%;
+            border-radius: 15px;
+            margin: 0 15%;
+        }
+    }   

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="contact.css" />
+    <script
+      src="https://kit.fontawesome.com/931303b88f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="loader" loader-hidden></div>
+    <div id="header">
+      <div class="contain">
+        <nav>
+          <label class="logo"> <span class="ala">A</span>LABO </label>
+          <ul id="menu">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+      </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="conleft">
+                    <h1>Contact Me</h1>
+                    <p><i class="fa-solid fa-at"></i>victoralabo99@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>08106543315</p>
+                    <div class="icons">
+                      <a class="what" href=""><i class="fa-brands fa-whatsapp"></i></a>
+                      <a class="link" href="https://www.linkedin.com/in/victor-alabo-456b4a255/"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a class="btn" href="Alabo Cv.pdf"  download="">Download CV</a>
+                </div>
+                <div class="conright">
+                  <form onsubmit="emailsend(); reset(); return false;">
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your Email" required>
+                    <textarea id="message" rows="6" placeholder="Your Message"></textarea>
+                    <button class="btn2" type="submit">Submit</button>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="about.js"></script>
+    
+  </body>
+</html>
