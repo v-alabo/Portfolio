@@ -46,6 +46,9 @@ body{
 #header{
     width: 100%;
     height: 100vh;
+    background: url(images/back1.jpg);
+    background-size: cover;
+    background-position: center;
 }
 #header img{
     float: right;
@@ -108,6 +111,13 @@ nav .fa-solid{
     display: none;
 }
 @media only screen and (min-width: 320px) and (max-width: 600px){
+    #header{
+        width: 100%;
+        height: 100vh;
+        background: url(images/back1.jpg);
+        background-size: cover ;
+        background-position: center;
+}
 .text{
     font-size: 16px;
     margin-top: 100%;
