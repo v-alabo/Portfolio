@@ -36,16 +36,3 @@ var subcontents = document.getElementsByClassName("sub-content");
   })
  } 
  /* Contact section */
- function emailsend(){
- Email.send({
-  Host : "smtp.elasticemail.com",
-  Username : "victoralabo99@gmail.com",
-  Password : "07492154797FE9EF679AADDD029BB15AC8EC",
-  To : 'victhoralabo@gmail.com',
-  From : "victoralabo99@gmail.com",
-  Subject : "This is the subject",
-  Body : "And this is the body"
-}).then(
-message => alert(message)
-);
- }

@@ -28,31 +28,62 @@
       </div>
     </div>
     <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="conleft">
-                    <h1>Contact Me</h1>
-                    <p><i class="fa-solid fa-at"></i>victoralabo99@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>08106543315</p>
-                    <div class="icons">
-                      <a class="what" href=""><i class="fa-brands fa-whatsapp"></i></a>
-                      <a class="link" href="https://www.linkedin.com/in/victor-alabo-456b4a255/"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                    <a class="btn" href="Alabo Cv.pdf"  download="">Download CV</a>
-                </div>
-                <div class="conright">
-                  <form onsubmit="emailsend(); reset(); return false;">
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Your Email" required>
-                    <textarea id="message" rows="6" placeholder="Your Message"></textarea>
-                    <button class="btn2" type="submit">Submit</button>
-                  </form>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="conleft">
+            <h1>Contact Me</h1>
+            <p><i class="fa-solid fa-at"></i>victoralabo99@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>08106543315</p>
+            <div class="icons">
+              <a class="what" href=""><i class="fa-brands fa-whatsapp"></i></a>
+              <a
+                class="link"
+                href="https://www.linkedin.com/in/victor-alabo-456b4a255/"
+                ><i class="fab fa-linkedin"></i
+              ></a>
             </div>
+            <a class="btn" href="Alabo Cv.pdf" download="">Download CV</a>
+          </div>
+          <div class="conright">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button class="btn2" type="submit">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbyXc3Nuf5x4A7wyo0mteqKMbjLc0Zy8X37g4aDQAF0G_rJdBf1XvapMgM8L3l5B0qY/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent succesfully";
+            setTimeout(function () {
+              msg.innerHTML = ""
+            },5000)
+            form.reset()
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
     <script src="about.js"></script>
-    
   </body>
 </html>

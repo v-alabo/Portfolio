@@ -182,6 +182,13 @@ form input, form textarea{
     font-weight: 400;
     cursor: pointer;
 }
+#msg{
+    color: #61b752;
+    display: block;
+    margin-top: 5px;
+    margin-left: 210px;
+    font-size: 28px;
+}
 @media only screen and (max-width: 600px){
     nav .fa-solid{
         display: block;
