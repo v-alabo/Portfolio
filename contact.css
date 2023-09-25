@@ -228,6 +228,13 @@ form input, form textarea{
     .row{
         display: inline;
     }
+    #msg{
+        color: #61b752;
+        display: block;
+        margin-top: 5px;
+        margin-left: 0px;
+        font-size: 28px;
+    }
     }
     @media only screen and (min-width: 650px) and (max-width: 950px){
         nav .fa-solid{
