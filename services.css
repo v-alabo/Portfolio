@@ -48,6 +48,9 @@ body {
 .logo {
   font-size: 50px;
   font-weight: 400;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .ala {
@@ -103,7 +106,10 @@ nav .fa-solid {
 #service{
   padding: 70px 5%;
 }
-
+h1{
+  font-size: 37px;
+  padding: 0 2%;
+}
 .services {
   position: relative;
   width: 1200px;
@@ -148,7 +154,7 @@ nav .fa-solid {
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 2px;
-  line-height: 25px;
+  line-height: 22px;
 }
 .services .card .more{
   position: relative;
@@ -208,22 +214,38 @@ nav .fa-solid {
     left: 25px;
     cursor: pointer;
   }
+  #service{
+    padding: 70px 0;
+  }
+  h1{
+    font-size: 37px;
+    padding: 0 5%;
+  }
   .services {
     position: relative;
-    width: 345px;
+    width: 350px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    
   }
   .services .card {
     position: relative;
     background: #262626;
-    padding: 20px;
+    padding: 20px 12px;
     border-radius: 10px;
-    width: 300px;
-    margin: 10px;
+    width: 900px;
+    margin: 0;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.services .card .content p{
+  font-size: 23px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 28px;
 }
 }
 @media only screen and (min-width: 650px) and (max-width: 950px) {
@@ -256,6 +278,13 @@ nav .fa-solid {
     left: 25px;
     cursor: pointer;
   }
+  #service{
+    padding: 70px 5%;
+  }
+  h1{
+    font-size: 37px;
+    padding: 0 10%;
+  }
   .services {
     position: relative;
     width: 750px;
@@ -271,7 +300,7 @@ nav .fa-solid {
     padding: 20px;
     border-radius: 10px;
     width: 600px;
-    margin: 20px;
+    
 }
 }
 
