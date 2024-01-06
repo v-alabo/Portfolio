@@ -4,6 +4,14 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+:root{
+    --prime: white;
+    --second: black;
+}
+.dark-theme{
+    --prime: black;
+    --second: white;
+}
 .loader {
     position: fixed;
     top: 0px;
@@ -13,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
+    background: var(--prime);
     transition: opacity 1s, visibility 10s, transform 5s;
     z-index: 1;
   }
@@ -40,13 +48,13 @@
     }
   }
 body{
-    background: black;
-    color: white;
+    background: var(--prime);
+    color: var(--second);
 }
 .logo{
     font-size: 50px;
     font-weight: 400;
-    color: white;
+    color: var(--second);
     text-decoration: none;
     cursor: pointer;
 }
@@ -55,7 +63,7 @@ body{
 
 }
 .contain{
-    padding: 30px 5%;
+    padding: 30px 2%;
 }
 nav{
     display: flex;
@@ -69,9 +77,9 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: white;
+    color: var(--second);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     position: relative;
 }
 nav ul li a::after{
@@ -90,11 +98,23 @@ nav ul li a:hover::after{
 nav .fa-solid{
     display: none;
 }
+
+  .bi-sun{
+    font-size: 30px;
+    top: 9px;
+    left: 9px;
+    
+  }
+  .bi-moon{
+    font-size: 30px;
+    top: 9px;
+    right: 8px;
+  }  
 #contact{
     padding: 70px 0;
 }
 .container{
-    padding: 0 5%;
+    padding: 0 3%;
 }
 .row{
     display: flex;
@@ -154,7 +174,7 @@ nav .fa-solid{
     padding: 15px;
     background: red;
     border-radius: 5px;
-    color: white;
+    color: var(--second);
     text-decoration: none;
     font-size: 25px;
 }
@@ -179,7 +199,7 @@ form input, form textarea{
     background: red;
     border: none;
     border-radius: 5px;
-    color: white;
+    color: var(--second);
     text-decoration: none;
     font-size:30px;
     font-weight: 400;
@@ -226,7 +246,7 @@ form input, form textarea{
     }
     .conleft{
         margin-bottom: 30px;
-        
+        text-align: center;
     }
     .row{
         display: inline;
@@ -238,6 +258,14 @@ form input, form textarea{
         margin-left: 0px;
         font-size: 28px;
     }
+    .bi-moon{
+        position: absolute;
+        font-size: 30px;
+        top: 40px;
+        left:25px; 
+        margin-left: 120px;
+        cursor: pointer;
+      } 
     }
     @media only screen and (min-width: 650px) and (max-width: 950px){
         nav .fa-solid{
@@ -273,9 +301,17 @@ form input, form textarea{
     }
     .conleft{
         margin-bottom: 30px;
-        
+        text-align: center;
     }
     .row{
         display: inline;
     }
+    .bi-moon{
+        position: absolute;
+        font-size: 30px;
+        top: 40px;
+        left:25px; 
+        margin-left: 120px;
+        cursor: pointer;
+      } 
     }

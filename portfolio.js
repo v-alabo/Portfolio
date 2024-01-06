@@ -1,3 +1,33 @@
+/* Theme switcther */
+const icon = document.getElementById('theme-switch')
+const body = document.querySelector('body')
+icon.onclick = function(){
+  document.body.classList.toggle("dark-theme")
+  body.style.transition = '2s';
+  this.classList.toggle('bi-sun')
+
+}
+/*
+const body = document.querySelector('body')
+const logo = document.querySelector('.logo')
+const nav = document.querySelector('nav ul li a')
+toggle.addEventListener('click', function(){
+  this.classList.toggle('bi-sun')
+  if(this.classList.toggle('bi-moon')){
+    body.style.background = 'black';
+    body.style.color = 'white';
+    body.style.transition = '2s';
+    logo.style.color = 'white';
+    nav.style.color = 'white'
+  }else{
+    body.style.background = 'white';
+    body.style.color = 'black';
+    body.style.transition = '2s';
+    logo.style.color = 'black';
+    
+   
+  }
+})
 /* Loader section */
 
 window.addEventListener("load", () => {

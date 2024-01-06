@@ -4,20 +4,29 @@
     font-family: 'Poppins' , sans-serif;
     box-sizing: border-box;
 }
+:root{
+    --prime: white;
+    --second: black;
+}
+.dark-theme{
+    --prime: black;
+    --second: white;
+}
 body{
-    background: black;
-    color: white;
+    background: var(--prime);
+    color: var(--second);
 }
 .logo{
     font-size: 50px;
     font-weight: 400;
+    color: var(--second);
 }
 .ala{
     color: red;
 
 }
 .container{
-    padding: 10px 10%;
+    padding: 10px 2%;
 }
 nav{
     display: flex;
@@ -31,9 +40,9 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: white;
+    color: var(--second);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     position: relative;
 }
 nav ul li a::after{
@@ -49,6 +58,22 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+nav .fa-solid{
+    display: none;
+}
+.bi-sun{
+    font-size: 30px;
+    top: 9px;
+    left: 9px;
+    cursor: pointer;
+    
+  }
+  .bi-moon{
+    font-size: 30px;
+    top: 9px;
+    right: 8px;
+    cursor: pointer;
+  } 
 #portfolio{
     padding: 70px 0;
 }
@@ -68,3 +93,85 @@ nav ul li a:hover::after{
     border-radius: 10px;
     display: block;
 }
+.layer h3 p{
+    color: var(--second);
+}
+@media only screen and (min-width: 280px) and (max-width: 600px){
+    nav .fa-solid{
+    display: block;
+    font-size: 30px;
+}
+nav ul{
+    position: fixed;
+    background: red;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 70px; 
+    transition: right 0.5s;
+    z-index: 1;  
+}
+nav ul li{
+    display: block;
+    margin: 37px 5%;
+    font-weight: 600;
+}
+nav ul li a{
+    font-size: 35px;
+}
+nav ul .fa-solid{
+    position: absolute;
+    top: 40px;
+    left:25px;
+    cursor: pointer;
+}
+
+  .bi-moon{
+    position: absolute;
+    font-size: 30px;
+    top: 40px;
+    left:25px; 
+    margin-left: 120px;
+    cursor: pointer;
+  } 
+}
+@media only screen and (min-width: 650px) and (max-width: 950px){
+    nav .fa-solid{
+        display: block;
+        font-size: 30px;
+    }
+    nav ul{
+        position: fixed;
+        background: red;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        padding-top: 70px; 
+        transition: right 0.5s;
+        z-index: 1;  
+    }
+    nav ul li{
+        display: block;
+        margin: 37px 10%;
+        font-weight: 600;
+    }
+    nav ul li a{
+        font-size: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 40px;
+        left:25px;
+        cursor: pointer;
+    }
+    .bi-moon{
+        position: absolute;
+        font-size: 30px;
+        top: 40px;
+        left:25px; 
+        margin-left: 120px;
+        cursor: pointer;
+      }  
+}    

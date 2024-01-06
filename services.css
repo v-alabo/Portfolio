@@ -4,6 +4,14 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+:root{
+  --prime: white;
+  --second: black;
+}
+.dark-theme{
+  --prime: black;
+  --second: white;
+}
 .loader {
   position: fixed;
   top: 0px;
@@ -13,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: black;
+  background: var(--prime);
   transition: opacity 1s, visibility 1s;
   z-index: 1;
 }
@@ -40,15 +48,15 @@
   }
 }
 body {
-  background: black;
-  color: white;
+  background: var(--prime);
+  color: var(--second);
   min-height: 100vh ;
 }
 
 .logo {
   font-size: 50px;
   font-weight: 400;
-  color: white;
+  color: var(--second);
   text-decoration: none;
   cursor: pointer;
 }
@@ -58,11 +66,11 @@ body {
 }
 
 .contain {
-  padding: 30px 5%;
+  padding: 30px 2%;
 }
 
 .container {
-  padding: 0 5%;
+  padding: 0 2%;
 }
 
 nav {
@@ -79,9 +87,9 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: var(--second);
   text-decoration: none;
-  font-size: 25px;
+  font-size: 30px;
   position: relative;
 }
 
@@ -103,8 +111,20 @@ nav ul li a:hover::after {
 nav .fa-solid {
   display: none;
 }
+
+.bi-sun{
+  font-size: 30px;
+  top: 9px;
+  left: 9px;
+}
+.bi-moon{
+  font-size: 30px;
+  top: 9px;
+  right: 8px;
+}
+
 #service{
-  padding: 70px 5%;
+  padding: 70px 2%;
 }
 h1{
   font-size: 37px;
@@ -117,6 +137,7 @@ h1{
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  align-items: center;
 }
 .services .card {
     position: relative;
@@ -125,10 +146,12 @@ h1{
     border-radius: 10px;
     width: 600px;
     margin: 20px;
+    align-content: center;
 }
 .services .card i{
     margin-bottom: 20px;
     font-size: 50px;
+    color: white;
 }
 .services .card .content{
     position: relative;
@@ -149,12 +172,14 @@ h1{
   font-weight: 500;
   margin-bottom: 20px;
   letter-spacing: 2px;
+  color: white;
 }
 .services .card .content p{
   font-size: 20px;
   font-weight: 300;
   letter-spacing: 2px;
   line-height: 22px;
+  color: white;
 }
 .services .card .more{
   position: relative;
@@ -247,6 +272,14 @@ h1{
   letter-spacing: 2px;
   line-height: 28px;
 }
+.bi-moon{
+  position: absolute;
+  font-size: 30px;
+  top: 40px;
+  left:25px; 
+  margin-left: 120px;
+  cursor: pointer;
+} 
 }
 @media only screen and (min-width: 650px) and (max-width: 950px) {
   nav .fa-solid {
@@ -299,8 +332,15 @@ h1{
     background: #262626;
     padding: 20px;
     border-radius: 10px;
-    width: 600px;
-    
+    width: 600px; 
 }
+.bi-moon{
+  position: absolute;
+  font-size: 30px;
+  top: 40px;
+  left:25px; 
+  margin-left: 120px;
+  cursor: pointer;
+} 
 }
 

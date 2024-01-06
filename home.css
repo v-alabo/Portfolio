@@ -4,6 +4,14 @@
     font-family: 'Poppins' , sans-serif;
     box-sizing: border-box;
 }
+:root{
+    --prime: white;
+    --second: black;
+}
+.dark-theme{
+    --prime: black;
+    --second: white;
+}
 .loader {
     position: fixed;
     top: 0px;
@@ -13,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
+    background: var(--prime);
     transition: opacity 1s, visibility 1s;
     z-index: 1;
   }
@@ -40,13 +48,13 @@
     }
   }
 body{
-    background: black;
-    color: white;
+    background: var(--prime);
+    color: var(--second);
 }
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/back4.jpg);
+    
     background-position:center;
 }
 #header img{
@@ -57,7 +65,7 @@ body{
 .logo{
     font-size: 50px;
     font-weight: 400;
-    color: white;
+    color: var(--second);
     text-decoration: none;
     cursor: pointer;
 }
@@ -66,7 +74,7 @@ body{
 
 }
 .container{
-    padding: 30px 5%;
+    padding: 30px 2%;
 }
 nav{
     display: flex;
@@ -80,9 +88,9 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: white;
+    color: var(--second);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     position: relative;
 }
 nav ul li a::after{
@@ -97,6 +105,28 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%;
+}
+
+
+input{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+
+.bi-sun{
+    font-weight: 900;
+    font-size: 30px;
+    top: 9px;
+    left: 9px;
+    
+}
+.bi-moon{
+    font-size: 30px;
+    top: 9px;
+    right: 8px;
+        
 }
 .text{
     margin-top: 20%;
@@ -114,12 +144,6 @@ nav .fa-solid{
     display: none;
 }
 @media only screen and (min-width: 280px) and (max-width: 600px){
-    #header{
-        width: 100%;
-        height: 100vh;
-        background-image: url(images/back3.jpg);
-        background-position:center;
-    }
 .text{
     margin-top: 120%;
 }
@@ -154,14 +178,16 @@ nav ul .fa-solid{
     left:25px;
     cursor: pointer;
 }
+.bi-moon{
+    position: absolute;
+    font-size: 30px;
+    top: 40px;
+    left:25px; 
+    margin-left: 120px;
+    cursor: pointer;
+  }  
 }
 @media only screen and (min-width: 650px) and (max-width: 950px){
-    #header{
-        width: 100%;
-        height: 100vh;
-        background-image: url(images/back3.jpg);
-        background-position:center;
-    }
     .text{
         font-size: 36px;
         margin-top: 20%;
@@ -197,4 +223,12 @@ nav ul .fa-solid{
         left:25px;
         cursor: pointer;
     }
-}    
+    .bi-moon{
+        position: absolute;
+        font-size: 30px;
+        top: 40px;
+        left:25px; 
+        margin-left: 120px;
+        cursor: pointer;
+      } 
+}      
