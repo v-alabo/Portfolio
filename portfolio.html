@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link class="icon" rel="icon" href="images/logo2.png" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="portfolio.css" />
     <link
@@ -15,14 +16,16 @@
     ></script>
   </head>
   <body>
+    <div class="loader" loader-hidden></div>
     <div id="header">
       <div class="container">
         <nav>
-          <label class="logo"> <span class="ala">A</span>LABO </label>
+          <a class="logo" href="home.html"><span class="ala">A</span>LABO</a>
           <ul id="menu">
             <li><a href="home.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="services.html">Service</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="contact.html">Contact</a></li>
             <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             <i class="bi bi-moon" id="theme-switch"></i>
@@ -33,26 +36,36 @@
     </div>
     <div id="portfolio">
         <div class="container">
-         <h1 class="work">My Work</h1>
+         <h1 class="work">Web Apps</h1>
          <div class="worklist">
             <div class="work">
-                <img src="images/port1.jpg" alt="" srcset="">
+                <img src="images/port1.jpg">
                 <div class="layer">
                     <h3>E-commerce App</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aperiam quasi ipsam hic animi! In molestiae aliquid explicabo, inventore modi veniam repudiandae animi qui deserunt nulla saepe beatae, tenetur officia?</p>
+                    <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
+                  </div>
+            </div>
+            <div class="work">
+                <img src="images/nsan.jpg">
+                <div class="layer">
+                <h3>Business Portfolio</h3>
+                    <p>An online platform or business website that enables businesses to present their products or services, 
+                      engage with customers, and facilitate transactions. This website serve as a centralized hub where prospective customers can explore more about the business,
+                       browse through offerings, and initiate purchases or inquiries.</p>
+                       <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
+                      </div>
+                    </div>
+            <div class="work">
+                <img src="images/port2.jpg">
+                <div class="layer">
+                <h3>E-commerce App</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aperiam quasi ipsam hic animi! In molestiae aliquid explicabo, inventore modi veniam repudiandae animi qui deserunt nulla saepe beatae, tenetur officia?</p>
+                    <a href="#"><i class="bi bi-box-arrow-up-right"></i></a>
+                  </div>
                 </div>
-            </div>
-            <div class="work">
-                <img src="images/port4.jpg" alt="" srcset="">
-                <h3>E-commerce App</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aperiam quasi ipsam hic animi! In molestiae aliquid explicabo, inventore modi veniam repudiandae animi qui deserunt nulla saepe beatae, tenetur officia?</p>
-            </div>
-            <div class="work">
-                <img src="images/port2.jpg" alt="" srcset="">
-                <h3>E-commerce App</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo aperiam quasi ipsam hic animi! In molestiae aliquid explicabo, inventore modi veniam repudiandae animi qui deserunt nulla saepe beatae, tenetur officia?</p>
-            </div>
-         </div>   
+         </div>
+         <a href="#" class="more">See more</a>   
         </div>
     </div>
     <script src="portfolio.js"></script>

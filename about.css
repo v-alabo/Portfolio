@@ -63,7 +63,7 @@
 
 }
 .contain{
-    padding: 30px 2%;
+    padding: 30px 3%;
 }
 
 nav{
@@ -114,7 +114,7 @@ nav .fa-solid{
     padding: 10px 0;
     color: var(--second);
 }.container{
-    padding: 0 2%;
+    padding: 0 3%;
 }
 .row{
     display: flex;

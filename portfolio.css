@@ -1,177 +1,265 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins' , sans-serif;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
-:root{
-    --prime: white;
-    --second: black;
+:root {
+  --prime: white;
+  --second: black;
 }
-.dark-theme{
-    --prime: black;
-    --second: white;
+.dark-theme {
+  --prime: black;
+  --second: white;
 }
-body{
-    background: var(--prime);
-    color: var(--second);
-}
-.logo{
-    font-size: 50px;
-    font-weight: 400;
-    color: var(--second);
-}
-.ala{
-    color: red;
-
-}
-.container{
-    padding: 10px 2%;
-}
-nav{
+.loader {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap
-}
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
-}
-nav ul li a{
-    color: var(--second);
-    text-decoration: none;
-    font-size: 30px;
-    position: relative;
-}
-nav ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background: red;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-nav ul li a:hover::after{
-    width: 100%;
-}
-nav .fa-solid{
-    display: none;
-}
-.bi-sun{
-    font-size: 30px;
-    top: 9px;
-    left: 9px;
-    cursor: pointer;
-    
+    justify-content: center;
+    background: var(--prime);
+    transition: opacity 1s, visibility 1s;
+    z-index: 1;
   }
-  .bi-moon{
-    font-size: 30px;
-    top: 9px;
-    right: 8px;
-    cursor: pointer;
-  } 
-#portfolio{
-    padding: 70px 0;
+  
+  .loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .loader::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 15px solid #45474b;
+    border-top-color: red;
+    border-radius: 50px;
+    animation: loader 1s ease infinite;
+  }
+  @keyframes loader {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+body {
+  background: var(--prime);
+  color: var(--second);
 }
-.worklist{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
+.logo {
+  font-size: 50px;
+  font-weight: 400;
+  color: var(--second);
+  text-decoration: none;
 }
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
+.ala {
+  color: red;
 }
-.work img{
-    width: 100%;
-    border-radius: 10px;
+.container {
+  padding:30px 3%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+nav ul li a {
+  color: var(--second);
+  text-decoration: none;
+  font-size: 30px;
+  position: relative;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: red;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+nav .fa-solid {
+  display: none;
+}
+.bi-sun {
+  font-size: 30px;
+  top: 9px;
+  left: 9px;
+  cursor: pointer;
+}
+.bi-moon {
+  font-size: 30px;
+  top: 9px;
+  right: 8px;
+  cursor: pointer;
+}
+#portfolio {
+  padding: 70px 0;
+}
+.worklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), red);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  transition: height 0.5s;
+}
+.layer h3{ 
+  color: white;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.layer p{
+    color: white;
+}
+.layer a{
+    margin-top: 10px;
+    color: red;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}.work:hover .layer{
+    height: 100%;
+}
+.more{
     display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid red;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--second) ;
+    transition: background 0.5s;
 }
-.layer h3 p{
-    color: var(--second);
+.more:hover{
+    background: red;
 }
-@media only screen and (min-width: 280px) and (max-width: 600px){
-    nav .fa-solid{
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  nav .fa-solid {
     display: block;
     font-size: 30px;
-}
-nav ul{
+  }
+  nav ul {
     position: fixed;
     background: red;
     top: 0;
     right: -200px;
     width: 200px;
     height: 100vh;
-    padding-top: 70px; 
+    padding-top: 70px;
     transition: right 0.5s;
-    z-index: 1;  
-}
-nav ul li{
+    z-index: 1;
+  }
+  nav ul li {
     display: block;
     margin: 37px 5%;
     font-weight: 600;
-}
-nav ul li a{
+  }
+  nav ul li a {
     font-size: 35px;
-}
-nav ul .fa-solid{
+  }
+  nav ul .fa-solid {
     position: absolute;
     top: 40px;
-    left:25px;
+    left: 25px;
     cursor: pointer;
-}
+  }
 
-  .bi-moon{
+  .bi-moon {
     position: absolute;
     font-size: 30px;
     top: 40px;
-    left:25px; 
+    left: 25px;
     margin-left: 120px;
     cursor: pointer;
-  } 
+  }
 }
-@media only screen and (min-width: 650px) and (max-width: 950px){
-    nav .fa-solid{
-        display: block;
-        font-size: 30px;
-    }
-    nav ul{
-        position: fixed;
-        background: red;
-        top: 0;
-        right: -300px;
-        width: 300px;
-        height: 100vh;
-        padding-top: 70px; 
-        transition: right 0.5s;
-        z-index: 1;  
-    }
-    nav ul li{
-        display: block;
-        margin: 37px 10%;
-        font-weight: 600;
-    }
-    nav ul li a{
-        font-size: 25px;
-    }
-    nav ul .fa-solid{
-        position: absolute;
-        top: 40px;
-        left:25px;
-        cursor: pointer;
-    }
-    .bi-moon{
-        position: absolute;
-        font-size: 30px;
-        top: 40px;
-        left:25px; 
-        margin-left: 120px;
-        cursor: pointer;
-      }  
-}    
+@media only screen and (min-width: 650px) and (max-width: 950px) {
+  nav .fa-solid {
+    display: block;
+    font-size: 30px;
+  }
+  nav ul {
+    position: fixed;
+    background: red;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    padding-top: 70px;
+    transition: right 0.5s;
+    z-index: 1;
+  }
+  nav ul li {
+    display: block;
+    margin: 37px 10%;
+    font-weight: 600;
+  }
+  nav ul li a {
+    font-size: 25px;
+  }
+  nav ul .fa-solid {
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .bi-moon {
+    position: absolute;
+    font-size: 30px;
+    top: 40px;
+    left: 25px;
+    margin-left: 120px;
+    cursor: pointer;
+  }
+}

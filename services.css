@@ -66,11 +66,11 @@ body {
 }
 
 .contain {
-  padding: 30px 2%;
+  padding: 30px 3%;
 }
 
 .container {
-  padding: 0 2%;
+  padding: 0 3%;
 }
 
 nav {
@@ -124,7 +124,7 @@ nav .fa-solid {
 }
 
 #service{
-  padding: 70px 2%;
+  padding: 70px 3%;
 }
 h1{
   font-size: 37px;
